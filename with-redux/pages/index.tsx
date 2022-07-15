@@ -1,21 +1,30 @@
-import ReactLogo from 'components/ReactLogo/ReactLogo'
-import type { NextPage } from 'next'
+import FlagsGrid from 'components/FlagsGrid/FlagsGrid'
+import { Country } from 'interfaces/Country/Country'
 import Head from 'next/head'
 
-const Home: NextPage = () => {
+export default function Home() {
+  const countries: Country[] = []
+
   return (
-    <div className="bg-[#1A2238] flex flex-col h-screen items-center justify-center font-sans">
+    <div className="flex flex-col w-full">
       <Head>
-        <title>Valtech_ React/Next boilerplate</title>
-        <meta name="description" content="This is the React/Next boilerplate" />
+        <title>Countries of the world</title>
+        <meta name="description" content="Countries of the world app" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <nav className="flex space-evenly h-8 bg-green-300">
+        <h1>
+          Countries of the world
+        </h1>
+      </nav>
+      <main className="flex flex-col align-center justify-center">
+        <div className="">Filters bar</div>
+        <FlagsGrid countries={countries} />
+      </main>
 
-      <ReactLogo />
-
-      <footer className="text-[#00d8ff] fixed h-14 bottom-0">Valtech_ ©</footer>
+      <footer className="footer">
+          github logo
+      </footer>
     </div>
   )
 }
-
-export default Home
