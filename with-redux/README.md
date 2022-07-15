@@ -1,34 +1,82 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# React/Next Boilerplate
 
-## Getting Started
+# What this boilerplate includes:
 
-First, run the development server:
+## Packages and dependencies configuration:
+
+- React/Next
+- Typescript
+- Prettier
+- ESLint
+- Jest, react-testing-library, ts-jest
+- Istanbul coverage
+
+## Version Configurations:
+
+- nvmrc, npmrc, yarnrc files to configure node and package manager versions
+
+## Git hooks using Husky:
+
+- Pre-commit hooks:
+  - run linter task
+- Pre-push hooks:
+  - test success
+
+## VS Code settings
+
+- code styling
+- debug tasks. cross-env dep included
+
+## Storybook
+
+## Project folder structure
 
 ```bash
-npm run dev
-# or
-yarn dev
+- components
+- hooks
+- utils
+- pages
+- styles
+- public
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## BaseComponent template
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Includes the component structure, style, story and mock data files to copy from to create other components
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Available commands
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```bash
+yarn dev // starts the dev server
+yarn build // production build
+yarn start // builds production and starts locally
+yarn test // runs the unit test suite
+yarn storybook // runs storybook
+yarn lint
+yarn prettier
+```
 
-## Learn More
+After yarn dev open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+# What this boilerplate Doesn NOT include:
+
+Global State management: Each project will set up the desired state management library depending on the need if necessary. Some examples of libraries to consider:
+
+- Redux (with Redux-saga or Redux-thunk)
+- Zustand
+- Jotai
+- mobx
+
+## Useful links
 
 To learn more about Next.js, take a look at the following resources:
 
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/)
 
-## Deploy on Vercel
+## Next steps
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Create ui component library with accessibility in place for basic elements: Modal, TabPanel, Accordions
+- Change hooks to use only updated files

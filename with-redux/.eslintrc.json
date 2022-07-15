@@ -1,3 +1,39 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": [
+    "plugin:storybook/recommended",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:jest/recommended",
+    "plugin:jest/style",
+    "plugin:testing-library/react",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "next",
+    "next/core-web-vitals"
+  ],
+  "globals": {
+    "React": "readonly",
+    "jest/globals": true
+  },
+  "plugins": ["jest"],
+  "rules": {
+    "no-unused-vars": ["error", { "args": "all", "argsIgnorePattern": "^_" }],
+    "jest/no-disabled-tests": "warn",
+    "jest/no-focused-tests": "error",
+    "jest/no-identical-title": "error",
+    "jest/prefer-to-have-length": "warn",
+    "jest/valid-expect": "error"
+  },
+  "parserOptions": {
+    "project": ["./tsconfig.json"] // Specify it only for TypeScript files
+  },
+  "overrides": [
+    {
+      "files": ["*.stories.@(ts|tsx|js|jsx|mjs|tjs)"],
+      "rules": {
+        // example of overriding a rule
+        "storybook/hierarchy-separator": "error"
+      }
+    }
+  ]
 }
