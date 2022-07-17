@@ -20,9 +20,11 @@
     "test:ci": "jest --coverage --silent --ci"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.8.3",
     "next": "12.1.6",
     "react": "18.1.0",
-    "react-dom": "18.1.0"
+    "react-dom": "18.1.0",
+    "react-redux": "^8.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.18.0",
